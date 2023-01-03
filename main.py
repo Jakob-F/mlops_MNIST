@@ -1,6 +1,6 @@
 import argparse
 import sys
-
+import numpy as np
 import torch
 import click
 
