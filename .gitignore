@@ -2,3 +2,5 @@
 __pycache__
 trained_model.pt
 training_curve.png
+train.pt
+test.pt

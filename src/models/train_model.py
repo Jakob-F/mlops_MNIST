@@ -5,6 +5,7 @@ import numpy as np
 import torch
 
 from models.model import MyAwesomeModel
+from src.data.make_dataset import CorruptMnist
 
 import matplotlib.pyplot as plt
 
@@ -42,8 +43,7 @@ class Train(object):
         # TODO: Implement training loop here
         model = MyAwesomeModel()
         model = model.to(self.device)
-        train_set = np.load('data/processed/train.npz', allow_pickle=True)
-        print(train_set)
+        train_set = torch.load('data/processed/train.pt')
         dataloader = torch.utils.data.DataLoader(train_set, batch_size=128)
         optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
         criterion = torch.nn.CrossEntropyLoss()

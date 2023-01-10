@@ -48,5 +48,5 @@ if __name__ == "__main__":
     print(dataset_train.targets.shape)
     print(dataset_test.data.shape)
     print(dataset_test.targets.shape)
-    torch.save(dataset_train, 'data/processed/train.npz')
-    torch.save(dataset_test, 'data/processed/test.npz')
+    torch.save(dataset_train, 'data/processed/train.pt')
+    torch.save(dataset_test, 'data/processed/test.pt')
