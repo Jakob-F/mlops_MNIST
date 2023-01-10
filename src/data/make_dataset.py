@@ -24,7 +24,6 @@ class CorruptMnist(Dataset):
     
     def download_data(self, train):
         files = os.listdir("data/raw")
-        print(files)
         if train:
             for file_idx in range(5):
                 if f'train_{file_idx}.npz' not in files:
@@ -41,8 +40,10 @@ class CorruptMnist(Dataset):
 
 
 if __name__ == "__main__":
+    # Change it such that it saves a tensor (Nx2 - data and targets) and not a class
     dataset_train = CorruptMnist(train=True)
     dataset_test = CorruptMnist(train=False)
+    print(dataset_train)
     print(dataset_train.data.shape)
     print(dataset_train.targets.shape)
     print(dataset_test.data.shape)
