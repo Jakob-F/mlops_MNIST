@@ -1,13 +1,12 @@
 import argparse
 import sys
-import numpy as np
 
+import matplotlib.pyplot as plt
+import numpy as np
 import torch
 
 from models.model import MyAwesomeModel
 from src.data.make_dataset import CorruptMnist
-
-import matplotlib.pyplot as plt
 
 
 class Train(object):

@@ -1,4 +1,6 @@
 from tests import _PATH_DATA
+
+
 def test_data():
    dataset = MNIST(...)
    assert len(dataset) == N_train for training and N_test for test

@@ -1,8 +1,9 @@
-import torch
-import numpy as np
-from torch.utils.data import Dataset
-import wget
 import os
+
+import numpy as np
+import torch
+import wget
+from torch.utils.data import Dataset
 
 
 class CorruptMnist(Dataset):

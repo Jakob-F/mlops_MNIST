@@ -1,12 +1,12 @@
 import argparse
 import sys
 
+import matplotlib.pyplot as plt
 import torch
 
 from models.model import MyAwesomeModel
 from src.data.make_dataset import CorruptMnist
 
-import matplotlib.pyplot as plt
 
 class Evaluate(object):
     """ Helper class that will help launch class methods as commands
